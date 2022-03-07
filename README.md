@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- View my Solution on [Frontend Mentor](https://your-solution-url.com)
-- View the Live Site [here](https://your-live-site-url.com)
+- View my Solution on [Frontend Mentor](https://www.frontendmentor.io/solutions/nftcard-active-hover-state-with-css-pseudoelements-hrqMUj7tt)
+- View the Live Site [here](https://kxnzx.github.io/nft-card-component/)
 
 ## My process
 
