@@ -1,0 +1,178 @@
+// GOOGLE FONTS
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+// VARIABLES
+// Colors
+// primary colors
+$primary_clr_blue: #8bacda;
+$primary_clr_cyan: #00fff7;
+// neutral colors
+$main_bg_clr: #0d192b;
+$card_bg_clr: #14253d;
+$line_clr: #2f415b;
+$white_clr: #ffffff;
+// Typography
+// font-family
+$ff_primary: "Outfit", sans-serif;
+// font-weight
+$fw_light: 300;
+$fw_regular: 400;
+$fw_semi_bold: 600;
+// font-size
+$fs_18px: 1.125rem;
+
+// RESET
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+// GLOBAL STYLES
+body {
+  font-family: $ff_primary;
+  background-color: $main_bg_clr;
+  display: grid;
+  place-items: center;
+  main {
+    height: 100vh;
+    position: relative;
+  }
+
+  .card {
+    max-width: 21rem;
+    margin-top: 50%;
+    padding: 1.25rem;
+    background-color: $card_bg_clr;
+    border-radius: 15px;
+    .card_showcase {
+      position: relative;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+      &::after {
+        content: url("data:image/svg+xml,%3Csvg width='48' height='48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h48v48H0z'/%3E%3Cpath d='M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E");
+        background: hsla(178, 100%, 50%, 0.5);
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.25s ease;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+
+      .card_image {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .card_line {
+      color: $line_clr;
+    }
+    .card_profile {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0 0;
+    }
+    .card_profile_picture {
+      width: 35px;
+      height: 35px;
+      object-fit: contain;
+      border: solid $white_clr 1px;
+      border-radius: 50%;
+    }
+    .card_profile_id {
+      padding-left: 1rem;
+    }
+  }
+}
+
+// TYPOGRAPHY
+.card_title {
+  color: $white_clr;
+  font-size: 1.5rem;
+  font-weight: $fw_semi_bold;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  &:hover {
+    color: $primary_clr_cyan;
+  }
+}
+.card_description {
+  color: $primary_clr_blue;
+  font-size: $fs_18px;
+  font-weight: $fw_light;
+  line-height: 1.6;
+}
+.card_metrics {
+  padding: 1.25rem 0;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  .card_metrics_points {
+    color: $primary_clr_cyan;
+    margin-left: 1.25rem;
+    &::before {
+      content: "";
+      display: inline-flex;
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z' fill='%2300FFF8'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 0.75rem;
+      height: 1.875rem;
+      width: 1.875rem;
+      left: 0;
+      position: absolute;
+    }
+  }
+  .card_metrics_clock {
+    &::before {
+      content: "";
+      display: inline-flex;
+      background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z' fill='%238BACD9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+      height: 1.875rem;
+      width: 1.875rem;
+      left: 63%;
+      position: absolute;
+    }
+  }
+}
+.card_metrics_clock,
+.card_profile_tag {
+  color: $primary_clr_blue;
+}
+.card_profile_name {
+  color: $white_clr;
+  font-weight: $fw_light;
+  cursor: pointer;
+  &:hover {
+    color: $primary_clr_cyan;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  color: $primary_clr_blue;
+  a {
+    color: $primary_clr_cyan;
+  }
+}
