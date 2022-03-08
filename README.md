@@ -63,7 +63,7 @@ Users should be able to:
 
 ### What I learned
 
-- I thought it was about time to learn about SASS and incorporate the extension into this challenge. So far I have learned about the SCSS syntax such as variables, extend, mixins and @use. I was not able to use the latter, because the VSC LIVE SASS Compiler version I used is depreciated. Next time I'll install the original version so that I can make partials. My variables:
+- I thought it was about time to learn about SASS and incorporate the extension into this challenge. So far I have learned about the SCSS syntax such as variables, extend, mixins and @use. I was not able to use the latter, because the VSC LIVE SASS Compiler version I used is deprecated. Next time I'll install the original version so that I can make partials. I used these variables:
 
 ```scss
 // primary colors
